@@ -34,9 +34,12 @@ function NavBar() {
  }
 
  function navBarRemove(){
-
+  if(windowWidth < 670){
+    
   ref.current.classList.remove('active')
   navRef.current.style.transform = 'translate(102%,45%)'
+  }
+
  }
 
 
