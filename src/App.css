@@ -485,9 +485,69 @@ ul li::before{
   .the--planets{
     margin-top: 0;
   }
+
+  
   ul{
     margin-top: 1em;
   }
+  ul li  {
+    position: relative;
+  }
+
+  ul .mercury--link::after,
+  ul .venus--link::after,
+  ul .earth--link::after,
+  ul .mars--link::after,
+  ul .jupiter--link::after,
+  ul .saturn--link::after,
+  ul .uranus--link::after,
+  ul .neptune--link::after {
+    content: '';
+    position: absolute;
+
+    height: 3px;
+    width: 0;
+    left: 0;
+    top: -11px;
+    transition: .3s;
+  }
+
+  ul .mercury--link:hover::after,
+  ul .venus--link:hover::after,
+  ul .earth--link:hover::after,
+  ul .mars--link:hover::after,
+  ul .jupiter--link:hover::after,
+  ul .saturn--link:hover::after,
+  ul .uranus--link:hover::after,
+  ul .neptune--link:hover::after{
+    width: 100%;
+  }
+
+  ul .mercury--link::after{
+    background-color: #419EBB;
+  }
+  ul .venus--link::after{
+    background-color: #EDA249;
+  }
+  ul .earth--link::after{
+    background-color: #6D2ED5;
+  }
+  ul .mars--link::after{
+    background-color: #D14C32;
+  }
+  ul .jupiter--link::after{
+    background-color: #D83A34;
+  }
+  ul .saturn--link::after{
+    background-color: #CD5120;
+  }
+  ul .uranus--link::after{
+    background-color: #1EC1A2;
+  }
+  ul .neptune--link::after{
+    background-color: #2D68F0;
+  }
+
 
   .c-cont{
     flex-direction: row;
