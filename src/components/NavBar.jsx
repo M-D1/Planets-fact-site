@@ -40,6 +40,9 @@ function NavBar() {
   navRef.current.style.transform = 'translate(102%,45%)'
   }
 
+  
+
+
  }
 
 
