@@ -26,10 +26,10 @@ function NavBar() {
   
   ref.current.classList.toggle('active')
   if(ref.current.classList.contains('active')){
-    navRef.current.style.transform ='translate(-2% ,45%)'
+    navRef.current.style.transform ='translate(-1% ,45%)'
   }
   else{
-   navRef.current.style.transform = 'translate(102%, 45%)'
+   navRef.current.style.transform = 'translate(121%, 45%)'
   }
  }
 
@@ -37,7 +37,7 @@ function NavBar() {
   if(windowWidth < 670){
     
   ref.current.classList.remove('active')
-  navRef.current.style.transform = 'translate(102%,45%)'
+  navRef.current.style.transform = 'translate(121%,45%)'
   }
 
   

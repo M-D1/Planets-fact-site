@@ -34,39 +34,10 @@ function utils (num) {
   }
  })
  
-  let color = ''
-
-  // changing the border color based on the planet
-  if(num === 0){
-    color = '#419EBB'
-  }else if(num === 1){
-    color = '#EDA249'
-  }else if(num === 2){
-    color ='#6D2ED5'
-  }
-  else if(num === 3){
-    color = '#D14C32'
-  }
-  else if(num === 4){
-    color = '#D83A34'
-  }
-  else if(num === 5){
-    color = '#CD5120'
-  }
-  else if(num === 6){
-    color = '#1EC1A2'
-  }
-  else{
-    color = '#2D68F0'
-  }
-
-  const pRef = useRef(null)
+ 
+ 
    const style ={
-    borderColor: windowWidth < 670 ? color : 'rgba(255, 255, 255, .4)' ,
-    // backgroundColor: windowWidth > 670 ? color : 'transparent'
-    // borderColor:color
-  
-   
+    borderColor: windowWidth < 670 ? colors[num] : 'rgba(255, 255, 255, .4)' ,
    }
    const bgStyle = {
       backgroundColor:windowWidth >= 670 && colors[num] ,
@@ -116,33 +87,12 @@ function utils (num) {
 
   let children = typeChange.current.children
   for (let i = 0; i < children.length; i++) {
-    const child = children[i];
-
-    
-
-   
-     
-
-    child.classList.remove('active')
-
-    
-
-    
-    
+    const child = children[i];     
+    child.classList.remove('active')    
   }
 
   e.target.classList.add('active')
 
-
- 
-  
-  
-  
-  
-
-
-
- 
  }
  
 
@@ -171,17 +121,23 @@ function utils (num) {
               
               </div>
               <div ref={typeChange} className='planet--extra--info'>
-                <p ref={pRef}   style={type === "overview" ? bgStyle : style}  data-type={'overview'} className="active" onClick={handleClick}>
+                
+                  <p  style={type === "overview" ? bgStyle : style}  data-type={'overview'} className="active" onClick={handleClick}>
                   {windowWidth >= 670 && <span>01</span>}
                   Overview
-                </p>
+                  </p>
+                
                
                
-                <p  style={  type === "structure" ? bgStyle : style } data-type={'structure'} onClick={handleClick}>
+             
+                  <p  style={  type === "structure" ? bgStyle : style } data-type={'structure'} onClick={handleClick}>
                   {windowWidth >= 670 && <span>02</span>}
                    {windowWidth < 670 ? 'Structure' : 'Internal Structure'}
                   </p>
-                <p   style={type === "geology" ? bgStyle : style}  data-type={'geology'} onClick={handleClick}>
+              
+                
+              
+                <p style={type === "geology" ? bgStyle : style}  data-type={'geology'} onClick={handleClick}>
                     {windowWidth >= 670 && <span>03</span>}
                     {windowWidth < 670 ? 'surface' : 'surface geology'}
                 </p>
