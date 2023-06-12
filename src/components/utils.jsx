@@ -7,6 +7,18 @@ import icon from '../assets/icon-source.svg'
 
 function utils (num) {
 
+    const colors = [
+    '#419EBB', // Planet 0
+    '#EDA249', // Planet 1
+    '#6D2ED5', // Planet 2
+    '#D14C32', // Planet 3
+    '#D83A34', // Planet 4
+    '#CD5120', // Planet 5
+    '#1EC1A2', // Planet 6
+    '#2D68F0'  // Planet 7 and beyond
+  ];
+  
+
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
@@ -48,13 +60,20 @@ function utils (num) {
     color = '#2D68F0'
   }
 
+  const pRef = useRef(null)
    const style ={
-    borderColor: windowWidth < 670 ? color : 'rgba(255, 255, 255, .4)',
+    borderColor: windowWidth < 670 ? color : 'rgba(255, 255, 255, .4)' ,
     // backgroundColor: windowWidth > 670 ? color : 'transparent'
     // borderColor:color
+  
    
    }
-   const pRef = useRef(null)
+   const bgStyle = {
+      backgroundColor:windowWidth >= 670 && colors[num] ,
+  
+      
+   }
+   
  
   
 
@@ -90,13 +109,18 @@ function utils (num) {
  function handleClick(e){
   setType(e.target.dataset.type)
 
+
+
   
 
 
   let children = typeChange.current.children
   for (let i = 0; i < children.length; i++) {
     const child = children[i];
-  
+
+    
+
+   
      
 
     child.classList.remove('active')
@@ -108,10 +132,11 @@ function utils (num) {
   }
 
   e.target.classList.add('active')
+
+
  
   
   
- 
   
   
 
@@ -119,6 +144,7 @@ function utils (num) {
 
  
  }
+ 
 
 
  return(
@@ -145,17 +171,17 @@ function utils (num) {
               
               </div>
               <div ref={typeChange} className='planet--extra--info'>
-                <p ref={pRef}  style={style}  data-type={'overview'} className="active" onClick={handleClick}>
+                <p ref={pRef}   style={type === "overview" ? bgStyle : style}  data-type={'overview'} className="active" onClick={handleClick}>
                   {windowWidth >= 670 && <span>01</span>}
                   Overview
                 </p>
                
                
-                <p ref={pRef} style={style} data-type={'structure'} onClick={handleClick}>
+                <p  style={  type === "structure" ? bgStyle : style } data-type={'structure'} onClick={handleClick}>
                   {windowWidth >= 670 && <span>02</span>}
                    {windowWidth < 670 ? 'Structure' : 'Internal Structure'}
                   </p>
-                <p ref={pRef} style={style}  data-type={'geology'} onClick={handleClick}>
+                <p   style={type === "geology" ? bgStyle : style}  data-type={'geology'} onClick={handleClick}>
                     {windowWidth >= 670 && <span>03</span>}
                     {windowWidth < 670 ? 'surface' : 'surface geology'}
                 </p>
