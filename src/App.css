@@ -623,7 +623,7 @@ ul li::before {
     gap: 8em;
   }
   .c-cont .planet--img{
-    width: 48%;
+    width: 150%;
   }
   .planet--name{
     font-size: 4rem;
