@@ -625,7 +625,7 @@ ul li::before {
   .c-cont .planet--img{
     width: 48%;
   }
-  .planet0{
+  .c-cont .planet--img.planet0{
     width: 150%;
   }
   .planet--name{
