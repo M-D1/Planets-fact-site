@@ -54,7 +54,7 @@ function utils (num) {
 
    function imgagesRender(){
    if(type === 'structure'){
-      return <img src={data[num].images.internal} className={` planet--img planet${num}`} alt='' />
+      return <img src={data[num].images.internal} className={`planet--img`} alt='' />
     }else if(type === 'geology'){
       return (
         <div className='geology--container'>
@@ -64,7 +64,7 @@ function utils (num) {
       )
     }
     else{
-       return <img src={data[num].images.planet} alt="" className='planet--img' /> 
+       return <img src={data[num].images.planet} alt="" className={` planet--img planet${num}`} /> 
     }
 
     
