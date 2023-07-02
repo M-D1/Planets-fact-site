@@ -617,3 +617,29 @@ ul li::before {
 
 
 }
+
+@media(min-width:1400px){
+  .c-cont{
+    gap: 8em;
+  }
+  .c-cont .planet--img{
+    width: 48%;
+  }
+  .planet--name{
+    font-size: 4rem;
+    margin-bottom: .4em;
+  }
+  .planet--info{
+    width: 81%;
+  }
+  .planet--extra--info{
+    font-size: 1rem;
+  }
+  .planet--RRRA div p:first-child{
+    font-size: 1rem;
+  }
+  .planet--RRRA div p:last-child{
+    font-size: 2rem;
+    margin-top: 0;
+  }
+}
