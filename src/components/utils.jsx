@@ -58,7 +58,7 @@ function utils (num) {
     }else if(type === 'geology'){
       return (
         <div className='geology--container'>
-          <img src={data[num].images.planet} alt="" className='planet--img' /> 
+          <img src={data[num].images.planet} alt="" className={`planet--img planet${num}`} /> 
           <img src={data[num].images.geology} className='planet--img geology'  alt='' />
         </div>
       )

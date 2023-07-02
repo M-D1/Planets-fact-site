@@ -623,6 +623,9 @@ ul li::before {
     gap: 8em;
   }
   .c-cont .planet--img{
+    width: 48%;
+  }
+  .planet0{
     width: 150%;
   }
   .planet--name{
