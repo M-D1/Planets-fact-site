@@ -642,7 +642,7 @@ ul li::before {
     font-size: 2rem;
     margin-top: 0;
   }
-  .geology--container .planet--img{
+  .geology--container img:first-child{
     width: 100%;
   }
 }
