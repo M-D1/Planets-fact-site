@@ -54,7 +54,7 @@ function utils (num) {
 
    function imgagesRender(){
    if(type === 'structure'){
-      return <img src={data[num].images.internal} className={`planet${num}`} alt='' />
+      return <img src={data[num].images.internal} className={` planet--img planet${num}`} alt='' />
     }else if(type === 'geology'){
       return (
         <div className='geology--container'>
