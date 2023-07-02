@@ -50,7 +50,7 @@ function NavBar() {
 
  return ( 
   <>
-   <header role='banner'>
+   <header >
   
 
       <Link to='.' className='the--planets'>
@@ -64,7 +64,7 @@ function NavBar() {
           
          </div>
 
-     <nav ref={navRef}  role='navigation'>
+     <nav ref={navRef}  >
       <ul className='nav--list'>
         <li onClick={navBarRemove} className='mercury--link'><Link  to='.'>Mercury</Link>
 
@@ -110,7 +110,7 @@ function NavBar() {
 
      </nav>
    </header>
-   <main role='main'>
+   <main >
      <Outlet />
    </main>
 
