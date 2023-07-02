@@ -114,7 +114,7 @@ function utils (num) {
 
                   <div className='source--container'>
                     <span className='source'>Source:</span>
-                    <a target='__blank' href={data[num][type].source} className='source'>Wikipedia</a>
+                    <a target='_blank' href={data[num][type].source} className='source'>Wikipedia</a>
                     <img className='icon--source' src={icon} alt="" />
                 
                   </div>
