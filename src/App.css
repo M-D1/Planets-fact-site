@@ -645,4 +645,7 @@ ul li::before {
   .geology--container img:first-child{
     width: 100%;
   }
+  .c-cont .geology--container .geology{
+    width: 56%;
+  }
 }
